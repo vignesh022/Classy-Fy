@@ -1,4 +1,4 @@
-![Spotify_Logo](https://www.adweek.com/wp-content/uploads/2019/11/Spotify-Logo-Black.png)
+![Spotify_Logo](https://i.imgur.com/ojKHKY4.png)
 # Classy-Fy
 ### A Personalized Playlist Filter for Spotify Music
 
