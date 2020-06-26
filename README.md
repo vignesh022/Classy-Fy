@@ -6,4 +6,4 @@
 
 ### A Personalized Playlist Filter for Spotify Music
 
-Import Streamlit using  ```python3 ```import streamlit as st``````
+Import Streamlit using  ```import streamlit as st```
