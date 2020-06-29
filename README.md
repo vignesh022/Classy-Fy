@@ -69,9 +69,9 @@ Now, to load up and run Classy-Fy, run the following command:
 ```
 streamlit run streamlit_kmeans.py
 ```
-You should be automatically taken to a new tab in your web browser with the following layout below. Simply enter the required details and you're ready to use Classy-Fy.
+You should be automatically taken to a new tab in your web browser and greeted with the layout below. Simply enter the required details and you're ready to use Classy-Fy.
 
-![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/streamlit_classyfy.png?raw=true)
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/streamlit_login.png?raw=true)
 
 To terminate the process in your terminal press Ctrl+C (You have to do this each time you wish to run the process anew from the terminal).
 
