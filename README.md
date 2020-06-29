@@ -9,9 +9,9 @@ A user-personalized playlist filter for new and emerging music on Spotify
 # Motivation
 
 Music Streaming has seen a sharp increase in growth across all facets of operation particularly revenue and subscriber growth. The number of paid subscribers in the US alone for 2019 was at all time high of 60.4 million subscribers according to the RIAA (Recording Industry Association of America).
-
+<p align="center">
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/usa_paid_subscribers.png?raw=true)
-
+</p>
 ### Defining the problem
 
 Regular users of Spotify's platform often curate and build their own playlists adjusting it to their unique tastes and for different situations. For example, my taste in music is fairly broad, I maintain a dedicated playlist for the different types of music I listen to as illustrated below.
