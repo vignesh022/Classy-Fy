@@ -7,6 +7,7 @@
 ### A Personalized Playlist Filter for Spotify Music
 
 ## Background and Motivation
+
 Music Streaming has seen a sharp increase in growth across all facets of operation particularly revenue and subscriber growth. The number of paid subscribers in the US alone for 2019 was at all time high of 60.4 million subscribers according to the RIAA (Recording Industry Association of America).[[1]](https://techcrunch.com/2020/02/26/streaming-services-accounted-for-nearly-80-of-all-music-revenue-in-2019/)
 
 Regular users of Spotify's platform often curate and build their own playlists adjusting it to their unique tastes and for different situations. For example, a given user might have a dedicated playlist for when are working/focusing on their jobs, a separate playlist for when they hit the gym, and similarly a new playlist for a different activity. 
@@ -15,7 +16,8 @@ Spotify currently does not assign new music to a user playlists, the process of 
 
 Introducing Classy-Fy, a tool for users to quickly organize new and upcoming music into their respective playlists. Classy-Fy has been designed along the lines of being a proof-of-concept for a feature/add-on on Spotify in future to help their premium subscribers quickly sort new music in their libraries. Classy-Fy currently functions as a locally deployable script which facilitates users to login into their Spotify accounts, authorize Classy-Fy access to their personal playlist data, and allow for label assignment. Users of Classy-Fy can submit either a single track/song to be assigned a playlist label or a brand new playlist altogther.
 
-## Data Collection and Usage
+## Creating a Spotify Application to access User Data
+
 ### Accessing Spotify
 Classy-Fy is primarily designed to work with user-created playlists, since playlists created by Spotify cannot be edited. To access a user's private Spotify data, authentication is required to faciliate Classy-Fy to work with their data. Since, Classy-Fy is designed to be deployed locally by a user, there are very limited privacy issues and concerns. The authentication issued is also temporary and ceases to exist once the user has exited the application.
 
