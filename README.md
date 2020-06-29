@@ -10,7 +10,7 @@
 
 Music Streaming has seen a sharp increase in growth across all facets of operation particularly revenue and subscriber growth. The number of paid subscribers in the US alone for 2019 was at all time high of 60.4 million subscribers according to the RIAA (Recording Industry Association of America).
 
-
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/usa_paid_subscribers.png?raw=true)
 
 Regular users of Spotify's platform often curate and build their own playlists adjusting it to their unique tastes and for different situations. For example, a given user might have a dedicated playlist for when are working/focusing on their jobs, a separate playlist for when they hit the gym, and similarly a new playlist for a different activity. 
 
