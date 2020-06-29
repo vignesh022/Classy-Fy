@@ -5,7 +5,7 @@ import spotipy
 import spotipy.util as util
 import streamlit as st
 
-img_url = "https://pyxis.nymag.com/v1/imgs/2b7/b66/dc2752664adfba3b8523d73873c5bf8034-26-spotify.2x.rsocial.w600.jpg"
+img_url = "https://i.imgur.com/ojKHKY4.png"
 st.image(img_url)
 
 st.title("CLASSY-FY")
