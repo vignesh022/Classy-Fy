@@ -26,3 +26,13 @@ Install the libraries needed to run Classy-Fy by opening up a new terminal windo
 ```
 pip install -r requirements.txt
 ```
+Once all the requisite packages have been installed, you can run the following in your terminal window to test if Streamlit installed correctly:
+```
+streamlit hello
+```
+If yes, you should automatically be directed to a new page with a message saying "Welcome to Streamlit". The page should look like this [here](https://imgur.com/pxYtk1e)
+
+Now, to load up and run Classy-Fy, run the following command:
+```
+streamlit run streamlit_kmeans.py
+```
