@@ -25,7 +25,7 @@ To work with the Spotify Web API, a CLIENT_ID and CLIENT_SECRET are required. Bo
 
 ### Obtaining Client Credentials
 To get started with the process of obtaining the CLIENT_ID and CLIENT_SECRET keys, head to the Spotify for Developers section. You can navigate to it from [here](https://developer.spotify.com/dashboard/). Login with your Spotify credentials, once you are logged in to your account you should be greeted by this. 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/spotify_dashboard.png?raw=true)
 
 On the newly opened page, create a new app through the "My New App" option, which should open a pop-box asking for a name for your app and a description. You can name this app "Classy-Fy" and in the description section you can enter anything you desire, for convenience you can simply type "A Personalized Playlist Filter". Also make sure to check both boxes accepting the terms and conditions put forth by Spotify. If done correctly you should be at this stage.
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
