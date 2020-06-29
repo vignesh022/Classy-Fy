@@ -12,7 +12,7 @@ Music Streaming has seen a sharp increase in growth across all facets of operati
 
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/usa_paid_subscribers.png?raw=true)
 
-## Defining the problem
+### Defining the problem
 
 Regular users of Spotify's platform often curate and build their own playlists adjusting it to their unique tastes and for different situations. For example, my taste in music is fairly broad, I maintain a dedicated playlist for the different types of music I listen to as illustrated below.
 
@@ -20,7 +20,7 @@ Regular users of Spotify's platform often curate and build their own playlists a
 
 Assuming an average length of 4 minutes per song, to simply organize and sort a mere 15 songs into your playlists takes a whole hour if you fully listen to them and gauge their fit. When dealing with more than 50+ songs the time investment is substantial. Can this process be automated while simultaneously ensuring songs are matched accurately with the best fitting playlist?
 
-## Conceptualizing a potential solution
+### Conceptualizing a potential solution
 
 Introducing Classy-Fy, a tool for users to quickly organize new and upcoming music into their respective playlists. Classy-Fy has been designed along the lines of being a proof-of-concept for a feature/add-on on Spotify in the future to help subscribers quickly sort new music in their libraries. 
 
@@ -45,13 +45,13 @@ pip install -r requirements.txt
 
 Classy-Fy is primarily designed to work with user-created playlists, since playlists created by Spotify cannot be edited. To access a user's private Spotify data, authentication is required to faciliate Classy-Fy to work with their data. Since, Classy-Fy is designed to be deployed locally by a user, there are very limited privacy issues and concerns. The authentication issued is also temporary and ceases to exist once the user has exited the application.
 
-## Accessing Spotify
+### Accessing Spotify
 
 Classy-Fy has been built fully in Python and uses Spotipy which is a lightweight Python library for the Spotify Web API. A complete guide and documentation about using Spotipy can be found [here](https://spotipy.readthedocs.io/en/2.12.0/#). The Spotify Web API is really powerful and allows for multitube of user related operations, read more about it [here](https://developer.spotify.com/documentation/web-api/).
 
 To work with the Spotify Web API, a CLIENT_ID and CLIENT_SECRET are required. Both of these keys are highly valuable and should not be shared with other users under any circumstances else your account could be compromised.
 
-## Obtaining Client Credentials
+### Obtaining Client Credentials
 
 To get started with the process of obtaining the CLIENT_ID and CLIENT_SECRET keys, head to the Spotify for Developers section. You can navigate to it from [here](https://developer.spotify.com/dashboard/). Login with your Spotify credentials, once you are logged in to your account you should be greeted by this.
 
@@ -67,7 +67,7 @@ Click "CREATE" and congratulations you now have your own personal Spotify based 
 
 You can view your CLIENT_SECRET and CLIENT_ID on the above page. Make a note of both as you will need them to run the scripts to allow for user authentication with the Spotify Web API.
 
-## Whitelisting the callback from Classy-Fy
+### Whitelisting the callback from Classy-Fy
 
 When performing user-authentication using the Spotify Web API, the process requries a valid redirect URI and for the URI to be whitelisted by the app so that it is not flagged as suspicious and invasive.
 
@@ -77,7 +77,7 @@ If you plan to run the Jupyter Notebooks in this repository, make sure to add "h
 
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/spotify_redirectURI.png?raw=true)
 
-## Entering Client Credentials in Classy-Fy Script
+### Entering Client Credentials in Classy-Fy Script
 
 Once you've gotten your CLIENT_ID, CLIENT_SECRET, and set your redirect URIs, you can head over to the "streamlit_kmeans.py" file and enter your details into the file.
 Set the value of your CLIENT_ID to the variable "cid" and your CLIENT_SECRET to the "secret" variable. Ensure your keys are wrapped in quotes as they are interpreted as strings by the Spotipy package.
