@@ -15,7 +15,20 @@ Spotify currently does not assign new music to a user playlists, the process of 
 
 Introducing Classy-Fy, a tool for users to quickly organize new and upcoming music into their respective playlists. Classy-Fy has been designed along the lines of being a proof-of-concept for a feature/add-on on Spotify in future to help their premium subscribers quickly sort new music in their libraries. Classy-Fy currently functions as a locally deployable script which facilitates users to login into their Spotify accounts, authorize Classy-Fy access to their personal playlist data, and allow for label assignment. Users of Classy-Fy can submit either a single track/song to be assigned a playlist label or a brand new playlist altogther.
 
-## Requirements to run Classy-Fy on your local machine
+## Data Collection and Usage
+### Accessing Spotify
+Classy-Fy is primarily designed to work with user-created playlists, since playlists created by Spotify cannot be edited. To access a user's private Spotify data, authentication is required to faciliate Classy-Fy to work with their data. Since, Classy-Fy is designed to be deployed locally by a user, there are very limited privacy issues and concerns. The authentication issued is also temporary and ceases to exist once the user has exited the application.
+
+Classy-Fy has been built fully in Python and uses Spotipy which is a lightweight Python library for the Spotify Web API. A complete guide and documentation about using Spotipy can be found [here](https://spotipy.readthedocs.io/en/2.12.0/#). The Spotify Web API is really powerful and allows for multitube of user related operations, read more about it [here](https://developer.spotify.com/documentation/web-api/).
+
+To work with the Spotify Web API, a CLIENT_ID and CLIENT_SECRET are required. Both of these keys are highly valuable and should not be shared with other users under any circumstances else your account could be compromised.
+
+### Obtaining Client Credentials
+To get started with the process of obtaining the CLIENT_ID and CLIENT_SECRET keys, head to the Spotify for Developers section. You can navigate to it from [here](https://developer.spotify.com/dashboard/). Login with your Spotify credentials, once you are logged in to your account you should be greeted by this [page](https://imgur.com/zEVhysB).
+
+
+
+## Running Classy-Fy on your local machine
 Classy-Fy uses Streamlit which is a really great open source library for building custom web-apps. You can learn about how awesome and easy to use Streamlit is [here](https://docs.streamlit.io/en/stable/)
 
 Streamlit requires a version of Python 3.6 or later. If you need the latest version of Python for your local machine, you can grab it from [here](https://www.anaconda.com/products/individual) 
@@ -26,13 +39,11 @@ Install the libraries needed to run Classy-Fy by opening up a new terminal windo
 ```
 pip install -r requirements.txt
 ```
-Once all the requisite packages have been installed, you can run the following in your terminal window to test if Streamlit installed correctly:
-```
-streamlit hello
-```
-If yes, you should automatically be directed to a new page with a message saying "Welcome to Streamlit". The page should look like this [here](https://imgur.com/pxYtk1e)
+
 
 Now, to load up and run Classy-Fy, run the following command:
 ```
 streamlit run streamlit_kmeans.py
 ```
+To terminate the process in your terminal press Ctrl+C (You have to do this each time you wish to run the process anew from the terminal).
+
