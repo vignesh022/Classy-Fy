@@ -16,6 +16,18 @@ Spotify currently does not assign new music to a user playlists, the process of 
 
 Introducing Classy-Fy, a tool for users to quickly organize new and upcoming music into their respective playlists. Classy-Fy has been designed along the lines of being a proof-of-concept for a feature/add-on on Spotify in future to help their premium subscribers quickly sort new music in their libraries. Classy-Fy currently functions as a locally deployable script which facilitates users to login into their Spotify accounts, authorize Classy-Fy access to their personal playlist data, and allow for label assignment. Users of Classy-Fy can submit either a single track/song to be assigned a playlist label or a brand new playlist altogther.
 
+## Running Python and Streamlit on your machine
+Classy-Fy uses Streamlit which is a really great open source library for building custom web-apps. You can learn about how awesome and easy to use Streamlit is [here](https://docs.streamlit.io/en/stable/)
+
+Streamlit requires a version of Python 3.6 or later. If you need the latest version of Python for your local machine, you can grab it from [here](https://www.anaconda.com/products/individual) 
+
+Once you've downloaded and installed the latest version of Python or have ensured that your version of Python is >= 3.6. You can clone this repository and/or download the various files included to run Classy-Fy 
+
+Install the libraries needed to run Classy-Fy by opening up a new terminal window from within the Anaconda Navigator and simply running the following:
+```
+pip install -r requirements.txt
+```
+
 ## Creating a Spotify Application to access User Data
 
 ### Accessing Spotify
@@ -45,24 +57,21 @@ When performing user-authentication using the Spotify Web API, the process requr
 
 On the same page where you viewed your Spotify CLIENT_ID and CLIENT-SECRET, there should an "EDIT SETTINGS" button on the top right. Click on it and you should see a pop-box with your app name, description, Website etc. The 4th option is Redirect URIs, paste the following in the section "http://localhost:8888/callback/" (without qoutes) and click "ADD". Click "SAVE" at the bottom else you will have to repeat the process all over again to add the URI.
 
+If you plan to run the Jupyter Notebooks in this repository, make sure to add "http://localhost:8501/" as another Redirect URI to the application else you might encounter login issues.
+
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/spotify_redirectURI.png?raw=true)
 
-## Running Classy-Fy on your local machine
-Classy-Fy uses Streamlit which is a really great open source library for building custom web-apps. You can learn about how awesome and easy to use Streamlit is [here](https://docs.streamlit.io/en/stable/)
-
-Streamlit requires a version of Python 3.6 or later. If you need the latest version of Python for your local machine, you can grab it from [here](https://www.anaconda.com/products/individual) 
-
-Once you've downloaded and installed the latest version of Python or have ensured that your version of Python is >= 3.6. You can clone this repository and/or download the various files included to run Classy-Fy 
-
-Install the libraries needed to run Classy-Fy by opening up a new terminal window from within the Anaconda Navigator and simply running the following:
-```
-pip install -r requirements.txt
-```
-
+### Entering Client Credentials in Classy-Fy Script
+Once you've gotten your CLIENT_ID, CLIENT_SECRET, and set your redirect URIs, you can head over to the "streamlit_kmeans.py" file and enter your details into the file.
+Set the value of your CLIENT_ID to the variable "cid" and your CLIENT_SECRET to the "secret" variable. Ensure your keys are wrapped in quotes as they are interpreted as strings by the Spotipy package.
 
 Now, to load up and run Classy-Fy, run the following command:
 ```
 streamlit run streamlit_kmeans.py
 ```
+You should be automatically taken to a new tab in your web browser with the following layout below. Simply enter the required details and you're ready to use Classy-Fy.
+
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/streamlit_classyfy.png?raw=true)
+
 To terminate the process in your terminal press Ctrl+C (You have to do this each time you wish to run the process anew from the terminal).
 
