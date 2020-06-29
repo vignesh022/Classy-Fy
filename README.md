@@ -14,7 +14,7 @@ Music Streaming has seen a sharp increase in growth across all facets of operati
 
 Regular users of Spotify's platform often curate and build their own playlists adjusting it to their unique tastes and for different situations. For example, my taste in music is fairly broad, I maintain a dedicated playlist for the different types of music I listen to as illustrated below.
 
-![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/spotify_playlist_examples.png?raw=true)
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/spotify_playlist_example.png?raw=true)
 
 Assuming an average length of 4 minutes per song, to simply organize and sort a mere 15 songs into your playlists takes a whole hour if you fully listen to them and gauge their fit. When dealing with more than 50+ songs the time investment is substantial. Can this process be automated while simultaneously ensuring songs are matched accurately with the best fitting playlist?
 
