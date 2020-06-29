@@ -13,10 +13,10 @@ st.write("Welcome to Classy-fy: A user-personalized playlist labeler")
 
 sp = spotipy.Spotify()
 from spotipy.oauth2 import SpotifyClientCredentials
-cid ='96c23a48f808449f88bd8d8f44962e40'
-secret ='596d6b18cd104b79b9566e9776274c6d'
-#redirect_uri='http://localhost:8888/callback/'
-redirect_uri='http://127.0.0.1:8501'
+cid ='Enter your CLIENT_ID here'
+secret ='Enter your CLIENT_SECRET here'
+redirect_uri='http://localhost:8888/callback/'
+#redirect_uri='http://127.0.0.1:8501'
 
 client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret)
 #sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
