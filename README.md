@@ -32,13 +32,13 @@ Classy-Fy currently functions as a locally deployable script which facilitates u
 
 # Running Python and Streamlit on your machine
 
-Classy-Fy uses Streamlit which is a really great open source library for building custom web-apps. You can learn about how awesome and easy to use Streamlit is [here](https://docs.streamlit.io/en/stable/)
+Classy-Fy is built using Streamlit, which is a really great open source library for building custom web-apps. You can learn about how awesome and easy to use Streamlit is [here](https://docs.streamlit.io/en/stable/)
 
 Streamlit requires a version of Python 3.6 or later. If you need the latest version of Python for your local machine, you can grab it from [here](https://www.anaconda.com/products/individual) 
 
-Once you've downloaded and installed the latest version of Python or have ensured that your version of Python is >= 3.6. You can clone this repository and/or download the various files included to run Classy-Fy 
+Once you've downloaded and installed the latest version of Python or have ensured that your version of Python is >= 3.6. You can clone this repository and/or download the various files included to get ready to run Classy-Fy. 
 
-Install the libraries needed to run Classy-Fy by opening up a new terminal window from within the Anaconda Navigator and simply running the following:
+Install the required libraries needed to run Classy-Fy by opening up a new terminal window from within the Anaconda Navigator and simply running the following:
 ```
 pip install -r requirements.txt
 ```
@@ -92,5 +92,5 @@ You should be automatically taken to a new tab in your web browser and greeted w
 
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/streamlit_login.png?raw=true)
 
-To terminate the process in your terminal press Ctrl+C (You have to do this each time you wish to run the process anew from the terminal).
+Hint: To terminate the process in your terminal press Ctrl+C (You have to do this each time you wish to run the process anew from the terminal).
 
