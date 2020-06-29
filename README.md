@@ -34,7 +34,17 @@ On the newly opened page, create a new app through the "My New App" option, whic
 
 Click "CREATE" and congratulations you now have your own personal Spotify based app!!. You should automatically be directed to a new page with a black background.
 
-You sh
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/spotify_credentials.png?raw=true)
+
+You can view your CLIENT_SECRET and CLIENT_ID on the above page. Make a note of both as you will need them to run the scripts to allow for user authentication with the Spotify Web API.
+
+### Whitelisting the callback from Classy-Fy
+When performing user-authentication using the Spotify Web API, the process requries a valid redirect URI and for the URI to be whitelisted by the app so that it is not flagged as suspicious and invasive.
+
+On the same page where you viewed your Spotify CLIENT_ID and CLIENT-SECRET, there should an "EDIT SETTINGS" button on the top right. Click on it and you should see a pop-box with your app name, description, Website etc. The 4th option is Redirect URIs, paste the following in the section "http://localhost:8888/callback/" (without qoutes) and click "ADD". Click "SAVE" at the bottom else you will have to repeat the process all over again to add the URI.
+
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/spotify_redirectURI.png?raw=true)
+
 ## Running Classy-Fy on your local machine
 Classy-Fy uses Streamlit which is a really great open source library for building custom web-apps. You can learn about how awesome and easy to use Streamlit is [here](https://docs.streamlit.io/en/stable/)
 
