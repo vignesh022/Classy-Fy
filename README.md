@@ -26,7 +26,7 @@ Assuming an average length of 4 minutes per song, to simply organize and sort a 
 
 Introducing Classy-Fy, a tool for users to quickly organize new and upcoming music into their respective playlists. Classy-Fy has been designed along the lines of being a proof-of-concept for a feature/add-on on Spotify in the future to help subscribers quickly sort new music in their libraries. 
 
-![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/classyfy_example.png?raw=true)
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/classyfy_ex.png?raw=true)
 
 Classy-Fy currently functions as a locally deployable script which facilitates users to login into their Spotify accounts, authorize access to their personal playlist data, and allow for label assignment. Users of Classy-Fy can submit either a single track/song to be assigned a playlist label or a brand new playlist altogther.
 
