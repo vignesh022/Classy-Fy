@@ -24,10 +24,13 @@ Classy-Fy has been built fully in Python and uses Spotipy which is a lightweight
 To work with the Spotify Web API, a CLIENT_ID and CLIENT_SECRET are required. Both of these keys are highly valuable and should not be shared with other users under any circumstances else your account could be compromised.
 
 ### Obtaining Client Credentials
-To get started with the process of obtaining the CLIENT_ID and CLIENT_SECRET keys, head to the Spotify for Developers section. You can navigate to it from [here](https://developer.spotify.com/dashboard/). Login with your Spotify credentials, once you are logged in to your account you should be greeted by this [page](https://imgur.com/zEVhysB).
+To get started with the process of obtaining the CLIENT_ID and CLIENT_SECRET keys, head to the Spotify for Developers section. You can navigate to it from [here](https://developer.spotify.com/dashboard/). Login with your Spotify credentials, once you are logged in to your account you should be greeted by this. 
+![page](https://imgur.com/zEVhysB)
 
-On the newly opened page, create a new app through the "My New App" option, which should open a pop-box asking for a name for your app and a description. You can name this app "Classy-Fy" and in the description section you can enter anything you desire, for convenience you can simply type "A Personalized Playlist Filter". Also make sure to check both boxes accepting the terms and conditions put forth by Spotify. If done correctly you should be at this stage [here](https://imgur.com/0jNXzpf). Click "CREATE" and congratulations you now have your own personal Spotify based app !!.
+On the newly opened page, create a new app through the "My New App" option, which should open a pop-box asking for a name for your app and a description. You can name this app "Classy-Fy" and in the description section you can enter anything you desire, for convenience you can simply type "A Personalized Playlist Filter". Also make sure to check both boxes accepting the terms and conditions put forth by Spotify. If done correctly you should be at this stage.
+![here](https://imgur.com/0jNXzpf) 
 
+Click "CREATE" and congratulations you now have your own personal Spotify based app !!.
 
 
 ## Running Classy-Fy on your local machine
