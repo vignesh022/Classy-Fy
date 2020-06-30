@@ -122,3 +122,9 @@ To validate the above approach, I used a two-pronged approach for all 3 of the a
 The overall dataflow for Classy-Fy can be summarized as:
 
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/Data_flow.png?raw=true)
+
+# Results
+
+Let's take a quick peek at what results Classy-Fy provides for a given user-submitted list:
+
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/classyfy_results.png?raw=true)
