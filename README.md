@@ -109,3 +109,4 @@ The process of assigning playlist labels to songs using Classy-Fy is an unsuperv
 | K-Nearest Neighbors | 48% |
 | Modified K-Means | 66% |
 | Random Forests | 69% |
+| Random Forests | 69% |
