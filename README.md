@@ -90,7 +90,6 @@ You should be automatically taken to a new tab in your web browser and greeted w
 
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/streamlit_login.png?raw=true)
 
-Hint: To terminate the process in your terminal press Ctrl+C (You have to do this each time you wish to run the process anew from the terminal).
 
 # Data Processing, Modeling and Validation
 
