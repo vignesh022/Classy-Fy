@@ -131,7 +131,10 @@ Let's take a quick peek at what results Classy-Fy provides for a given user-subm
 
 Classy-Fy assigns labels to the submitted songs and allows for a quick organization of any new music you're keen to listen to. The polar/radar chart allows the user to view and compare in detail which features vary between the different playlists.
 
-To further illustrate how effective Classy-Fy, let me show you different the polar chart is for a 2 playlist case:
+To further illustrate how effective Classy-Fy is at its purpose, let me show you an example polar chart for a 2 playlist case:
 
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/party_vs_focus.png?raw=true)
 
+The above chart compares the features for music coming from 2 distinctly different playlists named "Party" and "Focus". "Party" essentially is a collection of music that you might listen to at a club or when you looking to have a fun time, whereas "Focus" is playlist of music that is curated to help listeners focus while they're studying, working from home, and/or any activity that needs concentration.
+
+It is quite clear that "Party" measures higher on "danceability", "valence", "energy"
