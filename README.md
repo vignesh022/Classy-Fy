@@ -102,11 +102,20 @@ Spotify provides 18 [audio features](https://developer.spotify.com/documentation
 ### Modeling and Validation
 The process of assigning playlist labels to songs using Classy-Fy is an unsupervised classification problem, we are working with user-created playlists which do not always adhere to the same level of specification that Spotify uses when curating their playlists. The unsupervised approach used also makes validating our algorithm a challenging task as there are no labels to use as a ground truth.
 
-3 ML based classification/clustering approaches were selected and used to accomplish the label assignment namely, K-Nearest Neighbors (KNN), a modified K-Means approach, and Random Forests. All 3 algorithms were used on the same training and validation dataset to contrast their performance against each other and select the best approach. The table below shows the validation accuracy achieved by each algorithm:
+3 ML based classification/clustering approaches were selected and used to accomplish the label assignment namely, K-Nearest Neighbors (KNN), a Modified K-Means approach, and Random Forests. All 3 algorithms were used on the same training and validation dataset to contrast their performance against each other and select the best approach. The table below shows the validation accuracy achieved by each algorithm:
 
 | Classification Approach | Validation Accuracy |
 |-------------------------|---------------------|
 | K-Nearest Neighbors | 48% |
 | Modified K-Means | 66% |
 | Random Forests | 69% |
-| Random Forests | 69% |
+
+We selected the Modified K-Means as our final choice since it presented significantly higher accuracy to K-Nearest Neighbors, and was comparable in performance with the Random Forest model. The Modified K-Means model is also superior to the Random Forest model in terms of interpretability and explainability.
+
+The traditional K-Means approach of partitioning the songs into clusters and evaluating similarity at stage followed by reorganization was not utilized as that would destroy the user-created playlists. Instead, each user-created playlist was treated as an individual cluster, these individual clusters each contain songs that have been curated by the user. The clusters each possess a unique audio features vector which is the mean of the audio features of their constituent songs. These unique feature vectors are used to determine the euclidean distance between the features of a song submitted for labeling and the multiple clusters. Once the euclidean distance has been computed we proceed to assign the label of the "nearest" playlist to the song.
+
+To validate the above approach, we use a two-pronged approach for all 3 of the aforementioned classification methods.
+
+  * Firstly, we select a random subset of Spotify music genres from their 45+ available genres and proceed to extract all the available playlists for those selected genres. This comprehensive selection of songs is a labeled dataset as we have labels that can associate each song from its respective source playlist in the Spotify database. We split this selection into a 75/25 training and validation dataset and deployed all 3 classification methods and gain a measure of the accuracy of label assignment.
+  
+  * Firstly, we select a random subset of Spotify music genres from their 45+ available genres and proceed to extract all the available playlists for those selected genres. This comprehensive selection of songs is a labeled dataset as we have labels that can associate each song from its respective source playlist in the Spotify database. We split this selection into a 75/25 training and validation dataset and deployed all 3 classification methods and gain a measure of the accuracy of label assignment.
