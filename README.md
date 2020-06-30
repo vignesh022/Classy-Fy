@@ -118,4 +118,8 @@ To validate the above approach, we use a two-pronged approach for all 3 of the a
 
   * Firstly, we select a random subset of Spotify music genres from their 45+ available genres and proceed to extract all the available playlists for those selected genres. This comprehensive selection of songs is a labeled dataset as we have labels that can associate each song from its respective source playlist in the Spotify database. We split this selection into a 75/25 training and validation dataset and deployed all 3 classification methods and gain a measure of the accuracy of label assignment.
   
-  * Secondly, we used the user-created playlists for a given user. This step involved using only those songs which were part of the playlists that matched our selection criteria. We proceeded to split this selection into a 75/25 training and validation dataset and deployed all 3 classification methods and gain a measure of the accuracy of label assignment. This step is unique to each user since the assumption is that no two users have exactly the same choice of songs when it comes to curating music for their playlists. 
+  * Secondly, we used the user-created playlists for a given user. This step involved using only those songs which were part of the playlists that matched our selection criteria. We proceeded to split this selection into a 75/25 training and validation dataset and deployed all 3 classification methods and gain a measure of the accuracy of label assignment. This step is unique to each user since the assumption is that no two users have exactly the same choice of songs when it comes to curating music for their playlists.
+  
+The overall dataflow for Classy-Fy can be summarized as:
+
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/Data_flow.png?raw=true)
