@@ -26,7 +26,7 @@ Assuming an average length of 4 minutes per song, to simply organize and sort a 
 
 Introducing Classy-Fy, a tool to quickly organize new and upcoming music into user-created playlists. Classy-Fy has been designed along the lines of being a proof-of-concept for a feature/add-on on Spotify in the future to help subscribers quickly sort new music into their libraries.
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/classyfy_ex.png?raw=true)
-Classy-Fy currently functions as a locally deployable script which facilitates users to login into their Spotify accounts, authorize access to their personal playlist data, and allow for label assignment. Users of Classy-Fy can submit either a single track/song to be assigned a playlist label or a brand new playlist altogther.
+Classy-Fy currently functions as a locally deployable script which facilitates users to login into their Spotify accounts, authorize access to their personal playlist data, and allow for label assignment. Users of Classy-Fy can submit either a single song to be assigned a playlist label or a playlist of songs.
 
 # Running Python and Streamlit on your machine
 
@@ -92,3 +92,20 @@ You should be automatically taken to a new tab in your web browser and greeted w
 
 Hint: To terminate the process in your terminal press Ctrl+C (You have to do this each time you wish to run the process anew from the terminal).
 
+# Data Processing, Modeling and Validation
+
+Classy-Fy functions off the features extracted from a given user's song library. The Spotify Web API provides a dense variety of information regarding the songs, albums, playlists, and artists on their platform. To organize and match songs with the best fitting playlist we utilize the audio features provided by Spotify for each song.
+
+### Feature Selection
+Spotify provides 18 [audio features](https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/) for every song in their database. Among these 18 features only 13 are numerical and can be used to differentiate betweeen songs of varying styles and genres. Following detailed exploration of the 13 numerical features, we decided to drop 2 features which displayed very low variability of values across the whole database.
+
+### Modeling and Validation
+The process of assigning playlist labels to songs using Classy-Fy is an unsupervised classification problem, we are working with user-created playlists which do not always adhere to the same level of specification that Spotify uses when curating their playlists. The unsupervised approach used also makes validating our algorithm a challenging task as there are no labels to use as a ground truth.
+
+3 ML based classification/clustering approaches were selected and used to accomplish the label assignment namely, K-Nearest Neighbors (KNN), a modified K-Means approach, and Random Forests. All 3 algorithms were used on the same training and validation dataset to contrast their performance against each other and select the best approach. The table below shows the validation accuracy achieved by each algorithm:
+
+| Classification Approach | Validation Accuracy |
+|-------------------------|---------------------|
+| K-Nearest Neighbors | 48% |
+| Modified K-Means | 66% |
+| Random Forests | 69% |
