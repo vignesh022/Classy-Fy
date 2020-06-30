@@ -128,3 +128,10 @@ The overall dataflow for Classy-Fy can be summarized as:
 Let's take a quick peek at what results Classy-Fy provides for a given user-submitted list:
 
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/classyfy_results.png?raw=true)
+
+Classy-Fy assigns labels to the submitted songs and allows for a quick organization of any new music you're keen to listen to. The polar/radar chart allows the user to view and compare in detail which features vary between the different playlists.
+
+To further illustrate how effective Classy-Fy, let me show you different the polar chart is for a 2 playlist case:
+
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/party_vs_focus.png?raw=true)
+
