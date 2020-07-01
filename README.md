@@ -10,6 +10,10 @@ The average length of a song is ~ 4 minutes, to simply organize and sort a mere 
 
 Introducing, Classy-Fy an application for the active Spotify user/subscriber to help them quickly and efficiently organize their music into their library playlists. It functions primarily off the user's taste in music and takes a completely unbiased approach when assigning playlist label to songs.
 
+![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/classyfy_example.png?raw=true)
+
+The methods utilized in the design and development of Classy-Fy can be extended and applied towards understanding and predicting user/consumer behavior in the product analytics sector.
+
 # Motivation
 
 Music Streaming has seen a sharp increase in growth across all facets of operation particularly revenue and subscriber growth. The number of paid subscribers in the US alone for 2019 was at all time high of 60.4 million subscribers according to the RIAA (Recording Industry Association of America).
@@ -90,10 +94,7 @@ Now, to load up and run Classy-Fy, run the following command:
 ```
 streamlit run streamlit_kmeans.py
 ```
-You should be automatically taken to a new tab in your web browser and greeted with the layout below. Simply enter the required details and you're ready to use Classy-Fy.
-
-![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/streamlit_login.png?raw=true)
-
+You should be automatically taken to a new tab in your web browser and greeted with the Classy-Fy layout. Simply enter the required details and you're ready to use Classy-Fy.
 
 # Data Processing, Modeling and Validation
 
