@@ -4,7 +4,11 @@
 
 # Classy-Fy 
 
-A user-personalized playlist filter for new and emerging music on Spotify
+## A user-personalized playlist filter for new and emerging music on Spotify
+
+The average length of a song is ~ 4 minutes, to simply organize and sort a mere 15 songs into your playlists could take a whole hour if you fully listen to them and gauge their fit. When dealing with more than 50+ songs the time investment is substantial. Can this process be automated while simultaneously ensuring songs are matched accurately with the best fitting playlist?
+
+Introducing, Classy-Fy an application for the active Spotify user/subscriber to help them quickly and efficiently organize their music into their library playlists. It functions primarily off the user's taste in music and takes a completely unbiased approach when assigning playlist label to songs.
 
 # Motivation
 
@@ -20,12 +24,12 @@ Regular users of Spotify's platform often curate and build their own playlists a
 
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/spotify_playlist_example.png?raw=true)
 
-Assuming an average length of 4 minutes per song, to simply organize and sort a mere 15 songs into your playlists takes a whole hour if you fully listen to them and gauge their fit. When dealing with more than 50+ songs the time investment is substantial. Can this process be automated while simultaneously ensuring songs are matched accurately with the best fitting playlist?
-
 ### Conceptualizing a potential solution
 
-Introducing Classy-Fy, a tool to quickly organize new and upcoming music into user-created playlists. Classy-Fy has been designed along the lines of being a proof-of-concept for a feature/add-on on Spotify in the future to help subscribers quickly sort new music into their libraries.
+Classy-Fy is a tool I designed to quickly organize new and upcoming music into user-created playlists. Classy-Fy has been designed along the lines of being a proof-of-concept for a feature/add-on on Spotify in the future to help subscribers quickly sort new music into their libraries.
+
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/classyfy_ex.png?raw=true)
+
 Classy-Fy currently functions as a locally deployable script which facilitates users to login into their Spotify accounts, authorize access to their personal playlist data, and allow for label assignment. Users of Classy-Fy can submit either a single song to be assigned a playlist label or a playlist of songs.
 
 # Running Python and Streamlit on your machine
@@ -123,7 +127,7 @@ The overall dataflow for Classy-Fy can be summarized as:
 
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/Data_flow.png?raw=true)
 
-# Results
+# Visualizing the difference between playlists
 
 Let's take a quick peek at what results Classy-Fy provides for a given user-submitted list:
 
@@ -146,8 +150,6 @@ Another example I want to showcase is a 5 playlist validation example:
 I achieved a 70% accuracy of label assignment for this case.
 
 # Improvements
-
-Classy-Fy makes it easy for an active Spotify user/subscriber to quickly sort and organize their music into their library playlists. It functions off the user's tastes in music and takes a completely unbiased approach when assigning labels to songs.
 
 My intentions behind designing Classy-Fy stemmed from my own experience organizing my music library as I migrated across platforms in the past. Having a tool like Classy-Fy back in the day would have facilitated a smoother transition. That being said, Classy-Fy is primarily designed to advise a user on the best matching playlist label for a given song, this process can sometimes not be entirely accurate or accurate enough. 
 
