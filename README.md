@@ -8,7 +8,7 @@
 
 The average length of a song is ~ 4 minutes, to simply organize and sort a mere 15 songs into your playlists could take a whole hour if you fully listen to them and gauge their fit. When dealing with more than 50+ songs the time investment is substantial. Can this process be automated while simultaneously ensuring songs are matched accurately with the best fitting playlist?
 
-Introducing, Classy-Fy an application for the active Spotify user/subscriber to help them quickly and efficiently organize their music into their library playlists. It functions primarily off the user's taste in music and takes a completely unbiased approach when assigning playlist label to songs.
+Introducing, Classy-Fy an application for the active Spotify user/subscriber to help them quickly and efficiently organize their music into their library playlists. It functions by developing an understanding of a given user's taste in music and takes a completely unbiased approach when assigning playlist labels to songs.
 
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/classyfy_example.png?raw=true)
 
