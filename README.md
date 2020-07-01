@@ -144,3 +144,11 @@ Another example I want to showcase is a 5 playlist validation example:
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/5_playlist_validation.png?raw=true)
 
 I achieved a 70% accuracy of label assignment for this case.
+
+# Improvements
+
+Classy-Fy makes it easy for an active Spotify user/subscriber to quickly sort and organize their music into their library playlists. It functions off the user's tastes in music and takes a completely unbiased approach when assigning labels to songs.
+
+My intentions behind designing Classy-Fy stemmed from my own experience organizing my music library as I migrated across platforms in the past. Having a tool like Classy-Fy back in the day would have facilitated a smoother transition. That being said, Classy-Fy is primarily designed to advise a user on the best matching playlist label for a given song, this process can sometimes not be entirely accurate or accurate enough. 
+
+Improvements to the accuracy can be addressed by incorporating and engineering additional features to help facilitate better separation between playlists of a similar vibe/sound. All features I have utilized to this point are numerical, my model can definitely benefit from the inclusion of categorical features that assist in differentiating tracks which are similar to each other on a feature basis. Another valuable avenue to explore is the inclusion of audio signal processing features to develop a more robust model that incorporates all aspects of a given song and utilizing a different clustering algorithm like DBSCAN or Gaussian Mixture Modeling and comparing to see if it improves on the original choice of approach.
