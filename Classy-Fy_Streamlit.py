@@ -23,10 +23,10 @@ sp.trace=False
 scope = 'user-library-read playlist-read-private'
 
 @st.cache(allow_output_mutation=True)
-def songs_database(playlist_uris):
+def songs_database(playlist_uris,username):
     songs_df = pd.DataFrame()
     for uri in playlist_uris:
-        playlist = sp.user_playlist("spotify",uri)
+        playlist = sp.user_playlist(username,uri)
         songs = playlist["tracks"]["items"]
         ids = []
         song_names = []
@@ -52,6 +52,38 @@ def songs_database(playlist_uris):
             songs_df = df3
         else:
             songs_df = pd.concat([songs_df,df3],axis=0,ignore_index=True)
+
+    return songs_df
+
+@st.cache(allow_output_mutation=True)
+def test_song_data(playlist_uri, username):
+    songs_df = pd.DataFrame()
+    playlist = sp.user_playlist("spotify",playlist_uri)
+    songs = playlist["tracks"]["items"]
+    ids = []
+    song_names = []
+    song_artist = []
+
+    for i in range(len(songs)):
+        ids.append(songs[i]["track"]["id"])
+        song_names.append(songs[i]["track"]["name"])
+        song_artist.append(songs[i]["track"]["artists"][0]['name'])
+    features = sp.audio_features(ids)
+    df1 = pd.DataFrame()
+    for each in features:
+        if(each != None):
+            d = pd.DataFrame(each,index=[0])
+        df1 = df1.append(d,ignore_index=True)
+    df2 = pd.DataFrame()
+    df2["track_title"] = song_names
+    df2["track_artist"] = song_artist
+    df2["playlist_name"] = playlist["name"]
+    df3 = pd.concat([df2,df1], axis=1)
+
+    if songs_df.empty:
+        songs_df = df3
+    else:
+        songs_df = pd.concat([songs_df,df3],axis=0,ignore_index=True)
 
     return songs_df
 
@@ -81,27 +113,19 @@ if(user_name):
                     print("Playlist name: {}".format(pl_name))
                     count+=1
 
-            user_songs = songs_database(playlist_uris)
+            user_songs = songs_database(playlist_uris,username)
+            test_songs = test_song_data(uri_list,username)
             user_songs["label_id"] = user_songs["playlist_name"].map(playlist_labels)
             #user_songs.to_csv("user_songs.csv",index=False,header=True)
 
             ## KNN ##
             # Import train_test_split function
             from sklearn.model_selection import train_test_split
-
-            #user_songs = user_songs.sample(frac=1).reset_index(drop=True)
-            train_cols = ['danceability','energy', 'key', 'loudness', 'speechiness', 'acousticness',
-                          'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_ms']
-            target_cols = "label_id"
-            features = user_songs[train_cols]
-            target = user_songs[target_cols]
-
             from sklearn.preprocessing import MinMaxScaler
-            scaler = MinMaxScaler()
-            features_scaled = scaler.fit_transform(features)
 
-            # Split dataset into training set and test set
-            X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=1)
+            scaler = MinMaxScaler()
+            # features_scaled = scaler.fit_transform(features)
+            # test_scaled = scaler.fit_transform(features_test)
 
             #Import scikit-learn metrics module for accuracy calculation
             from sklearn import metrics
@@ -119,6 +143,7 @@ if(user_name):
             target_cols = "label_id"
             result_cols = ["track_title","track_artist"]
             target = features[target_cols]
+            features_test = test_songs[train_cols]
 
             # Split dataset into training set and test set
             X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.25, random_state=1)
@@ -126,13 +151,13 @@ if(user_name):
 
             for each in playlist_labels:
                 temp = pd.DataFrame()
-                temp = X_train[X_train["playlist_name"] == each]
+                temp = features[features["playlist_name"] == each]
                 temp2 = pd.DataFrame(scaler.fit_transform(temp[train_cols]))
                 playlist_clusters[each] = cluster_centroids(temp2)
 
             playlist_clusters = pd.DataFrame.from_dict(playlist_clusters, orient='index')
 
-            X_test_scaled = pd.DataFrame(scaler.fit_transform(X_test[train_cols]))
+            X_test_scaled = pd.DataFrame(scaler.fit_transform(test_songs[train_cols]))
 
             def distances(X):
                 X = np.array(X)
@@ -152,14 +177,14 @@ if(user_name):
             predictions = predictions.rename("assigned_playlist")
             y_pred = predictions.map(playlist_labels)
 
-            count=0
-            for i in range(len(y_pred)):
-                if(y_pred[i] == y_test[i]):
-                    count+=1
-            acc = count/len(y_pred)
+            # count=0
+            # for i in range(len(y_pred)):
+            #     if(y_pred[i] == y_test[i]):
+            #         count+=1
+            # acc = count/len(y_pred)
             #st.write("Validation Accuracy: ",acc)
 
-            X_final = X_test[result_cols]
+            X_final = test_songs[result_cols]
             X_final = X_final.reset_index(drop=True)
             songs_result = pd.concat([X_final,predictions],axis=1,)
             st.write("Here are the songs from the playlist you uploaded to be classyfied:")
