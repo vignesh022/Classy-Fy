@@ -58,12 +58,10 @@ def songs_database(playlist_uris):
 user_name = st.text_input("Please enter you Spotify username")
 st.write("You can fetch your username by checking your account details on https://www.spotify.com/us/account/overview/")
 
-
-
 if(user_name):
 
     uri_list = st.text_input("Please enter the URI of the Spotify song/playlist you want labeled")
-
+    st.write("You can learn how to obtain the URI by checking out: http://help.playlistpush.com/en/articles/2511141-how-do-i-find-my-spotify-uri-link")
     if(st.button('Click here to login into your Spotify account')):
         token = util.prompt_for_user_token(user_name, scope,client_id=cid, client_secret=secret, redirect_uri=redirect_uri)
         if token:
