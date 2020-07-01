@@ -26,7 +26,7 @@ Regular users of Spotify's platform often curate and build their own playlists a
 
 ### Conceptualizing a potential solution
 
-Classy-Fy is a tool I designed to quickly organize new and upcoming music into user-created playlists. Classy-Fy has been designed along the lines of being a proof-of-concept for a feature/add-on on Spotify in the future to help subscribers quickly sort new music into their libraries.
+Classy-Fy is a tool designed to quickly organize new and upcoming music into user-created playlists. Classy-Fy has been designed along the lines of being a proof-of-concept for a feature/add-on on Spotify in the future to help subscribers quickly sort new music into their libraries.
 
 ![](https://github.com/vignesh022/Classy-Fy/blob/master/Images/classyfy_ex.png?raw=true)
 
