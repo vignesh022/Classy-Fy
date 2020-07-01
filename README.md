@@ -92,7 +92,7 @@ Set the value of your CLIENT_ID to the variable "cid" and your CLIENT_SECRET to 
 
 Now, to load up and run Classy-Fy, run the following command:
 ```
-streamlit run streamlit_kmeans.py
+streamlit run Classy-Fy_Streamlit.py
 ```
 You should be automatically taken to a new tab in your web browser and greeted with the Classy-Fy layout. Simply enter the required details and you're ready to use Classy-Fy.
 
